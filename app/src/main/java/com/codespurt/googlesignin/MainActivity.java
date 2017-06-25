@@ -109,11 +109,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String personName = acct.getDisplayName();
             String personGivenName = acct.getGivenName();
             String personFamilyName = acct.getFamilyName();
+
+            userEmail.setText("Email: " + personEmail);
         } else {
             Toast.makeText(this, "Unable to sign in", Toast.LENGTH_SHORT).show();
         }
     }
-
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
